@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.main-container {
+  padding: 30px 25px 40px 25px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app__daytime {
+  background-image: url(../public/assets/mobile/bg-image-daytime.jpg);
+}
+
+.app__daytime > .main-container {
+  background-color: hsla(0, 0%, 0%, 0.4);
+}
+
+.app__nighttime {
+  background-image: url(../public/assets/mobile/bg-image-nighttime.jpg);
+}
+
+@media only screen and (orientation: landscape) {
+  .app__daytime {
+    background-image: url(../public/assets/desktop/bg-image-daytime.jpg);
   }
-  to {
-    transform: rotate(360deg);
+
+  .app__nighttime {
+    background-image: url(../public/assets/desktop/bg-image-nighttime.jpg);
+  }
+
+  .main-container {
+    padding: clamp(25px, 5vh, 56px) clamp(25px, 10vh, 165px);
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto 56px;
   }
 }
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .app__daytime {
+    background-image: url(../public/assets/tablet/bg-image-daytime.jpg);
+  }
+
+  .app__nighttime {
+    background-image: url(../public/assets/tablet/bg-image-nighttime.jpg);
+  }
+
+  .main-container {
+    padding: 80px 65px 65px 65px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main-container {
+    padding: 55px clamp(65px, calc(4.0625rem + ((1vw - 12px) * 41.6667)), 165px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

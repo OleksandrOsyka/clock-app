@@ -1,0 +1,66 @@
+.more-less-button {
+    text-decoration: none;
+    border: none;
+    text-transform: uppercase;
+    background-color: #FFF;
+    color: #000;
+    letter-spacing: 3.75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 115px;
+    height: 39px;
+    border-radius: 28px;
+    padding-left: 17px;
+    padding-right: 4px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+  .more::before {
+    content: 'More';
+  }
+
+  .less::before {
+    content: 'Less';
+  }
+
+
+
+  .less img {
+    rotate: 180deg;
+    transition: 1s;
+  }
+
+  @media only screen and (orientation: landscape) {
+    .more-less-button {
+      margin-top: 0;
+        margin-left: auto;
+        grid-area: 3 / 2 / span 1 / span 1;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .more-less-button {
+        width: 146px;
+        height: 56px;
+        border-radius: 28px;
+        font-size: 16px;
+line-height: 28px;
+letter-spacing: 5px;
+padding-right: 9px;
+    }
+
+    .more-less-button img  {
+        width: 40px;
+        height: 40px;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .more-less-button {
+      margin-top: 0;
+        margin-left: auto;
+        grid-area: 3 / 2 / span 1 / span 1;
+    }
+  }
